@@ -1,0 +1,8 @@
+<div class="card">
+  <img src="https://as2.ftcdn.net/v2/jpg/00/56/38/47/1000_F_56384791_ayu757cUZU96Hwg293wWJblGhE30dHp4.jpg" alt="<%= product.name %>" class="card__image">
+  <h3 class="card__title"><%= product.name %></h3>
+  <p class="card_description"><%= product.description %></p>
+  <p class="card_price"><%= typeof product.price === 'number' ? `${product.price.toFixed(2)} PLN` : 'N/A' %></p>
+  <a href="/products/<%= product.name %>">Details</a>
+  <button onclick="deleteProduct('<%= product.name %>')">Delete</button>
+</div>
